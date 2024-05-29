@@ -1,4 +1,4 @@
-# dp-assessment-with-airflow
+<img width="1423" alt="Screenshot 2024-05-29 at 9 04 12 PM" src="https://github.com/rameezshaikh47/dp-assessment-with-airflow/assets/24712733/e3078a31-270b-4eb0-b511-881467cf378c"># dp-assessment-with-airflow
 
 ## Introduction 
 
@@ -121,7 +121,8 @@ This is done using an Airflow DAG named. [schema_creation_dag](http://localhost:
 <img width="1431" alt="image" src="https://github.com/rameezshaikh47/dp-assessment-with-airflow/assets/24712733/21f923bc-d933-4b6d-bd15-12071207da4c">
 
 **Log Summary**
+<img width="1429" alt="image" src="https://github.com/rameezshaikh47/dp-assessment-with-airflow/assets/24712733/b72d1a46-2cc6-4d2d-a9b4-10e783ac91e1">
 
-<img width="1431" alt="image" src="https://github.com/rameezshaikh47/dp-assessment-with-airflow/assets/24712733/1ee1fdb7-6f18-4e23-8433-d4776f30f512">
+
 
 
