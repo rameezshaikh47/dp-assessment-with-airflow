@@ -113,7 +113,14 @@ def log_processed_record_counts():
     logging.info('\n'*2 + '#'*50 + '\t'*3 + 'Current Run Summary' + '\t'*3 + '#'*50 + '\n'*2)
     with engine.connect() as connection:
 
-        load_summary_query = get_query_from_template('load_summary.sql', )
+        load_summary_query = get_query_from_template('total_record_processed.sql' )
+        result = connection.execute(load_summary_query)
+        for row in result:
+            logging.info(f"Total Records Processed in Current Run , Count: {row['count']}")
+
+        logging.info('\n')
+
+        load_summary_query = get_query_from_template('load_summary.sql' )
         result = connection.execute(load_summary_query)
         for row in result:
             logging.info(f"Load Status: {row['load_status']}, Count: {row['count']}")
