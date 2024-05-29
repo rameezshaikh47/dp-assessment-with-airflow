@@ -123,6 +123,23 @@ This is done using an Airflow DAG named. [schema_creation_dag](http://localhost:
 **Log Summary**
 <img width="1429" alt="image" src="https://github.com/rameezshaikh47/dp-assessment-with-airflow/assets/24712733/b72d1a46-2cc6-4d2d-a9b4-10e783ac91e1">
 
+## Some Helpful Audit Queries 
 
+1. Check the load status by day
+   ```
+   SELECT load_timestamp::date, load_status, COUNT(1) 
+   FROM data_platform.processed.temperature_readings
+   GROUP BY load_timestamp::date,load_status;
+   ```
 
+2. Check load messages by day
+   ```
+   SELECT load_timestamp::date, validation_message, COUNT(1) 
+   FROM data_platform.processed.temperature_readings
+   GROUP BY load_timestamp::date, validation_message;
+   ```
 
+3. Check for log of rejected files
+   ```
+   SELECT * FROM data_platform.dwh_audit.rejected_files_log;
+   ```
