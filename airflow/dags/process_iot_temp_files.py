@@ -27,7 +27,7 @@ dag = DAG(
     'process_iot_temp_files',
     default_args=default_args,
     description='A DAG to load CSV to staging, validate, and move to golden table',
-    schedule_interval=timedelta(days=1),
+    schedule_interval=None,
 )
 """
     Note:

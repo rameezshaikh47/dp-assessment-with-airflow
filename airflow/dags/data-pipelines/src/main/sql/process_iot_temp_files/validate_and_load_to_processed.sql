@@ -38,7 +38,7 @@ AND load_status='Processing';
 
 -- Check for Duplicate ID's
 UPDATE {{params.SCHEMA_PROCESSED}}.{{params.PROCESSED_TABLE}}
-SET load_status='Duplicate'
+SET load_status='Duplicate', validation_message='Duplicate Record'
 WHERE id in (SELECT id
              FROM {{params.SCHEMA_STAGING}}.{{params.STAGING_TABLE}}
              GROUP BY id
