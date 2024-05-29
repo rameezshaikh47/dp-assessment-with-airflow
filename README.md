@@ -45,9 +45,56 @@ Airflow web UI can now be accessed using the URL: http://localhost:8080/
 **Password:** airflow
 
 
-5. Create a connection from Airflow to PostgreSQL 
+5. Create a new database in PostgreSQL
+
+   Connect to PostgreSQL DB using PgAdmin with below credentials
+
+   **Host Name:** localhost
+   
+   **Username:** airflow
+
+   **Password:** airflow
+
+   **Port:** 5432
+
+   **Maintenance Database:** airflow
+   
+   Once connected, create a database by name `data_platform`. This database will be used store the processed data and to create a connection in Airflow.
+   ```
+   CREATE DATABASE data_platform;
+   ```
+
+7. Create Airflow connection to PostgreSQL DB
+
+   Login to Airflow using the URL and credentials given in step (4)
+
+   Once logged in, Click in Admin >> Connections
+
+   <img width="921" alt="image" src="https://github.com/rameezshaikh47/dp-assessment-with-airflow/assets/24712733/109e6126-f5e9-46b8-ae19-6cdc4ac92f77">
+
+   Create a new connection by clicking on <img width="31" alt="image" src="https://github.com/rameezshaikh47/dp-assessment-with-airflow/assets/24712733/88fda944-3ed4-47b3-b035-6ebc61394527"> icon. This will open a new window to create the connection. Enter following details
+
+   **Connection Id:** postgresql-data-platform
+   
+   **Connection Type:** Postgres
+   
+   **Host:** postgres
+   
+   **Schema:** data_platform
+   
+   **Login:** airflow
+   
+   **Password:** airflow
+   
+   **Port:** 5432
+
+   Test the connection and save
+
+   <img width="1067" alt="image" src="https://github.com/rameezshaikh47/dp-assessment-with-airflow/assets/24712733/d879c53b-a655-461c-ba0f-b714ec73a65b">
 
    
-   
+## Create Schema's and Tables 
+
+Once the environment is setup, the next step is to create the required Schema 
 
 
