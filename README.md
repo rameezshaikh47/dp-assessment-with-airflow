@@ -1,4 +1,4 @@
-<img width="1423" alt="Screenshot 2024-05-29 at 9 04 12 PM" src="https://github.com/rameezshaikh47/dp-assessment-with-airflow/assets/24712733/e3078a31-270b-4eb0-b511-881467cf378c"># dp-assessment-with-airflow
+# dp-assessment-with-airflow
 
 ## Introduction 
 
